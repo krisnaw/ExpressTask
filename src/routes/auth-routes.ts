@@ -3,14 +3,15 @@ import {Router} from "express";
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello Auth!')
 })
 
 router.get('/login', (req, res) => {
     res.send('Login')
 })
 
-router.get('/register', (req, res) => {
+router.post('/register', (req, res) => {
+    console.log(req.query)
     res.send('Register')
 })
 
